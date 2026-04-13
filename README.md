@@ -91,12 +91,12 @@ Target variable:
 
 ## Results Summary
 
-| Model              | Test RMSE | Test R² |
-|-------------------|----------|--------|
-| Linear Regression  | ~0.126   | ~0.915 |
-| Ridge Regression   | ~0.131   | ~0.908 |
-| Random Forest      | ~0.150   | ~0.880 |
-| XGBoost            | ~0.126   | ~0.915 |
+| Model              | Test RMSE | Test R² | CV RMSE |
+|-------------------|----------|--------|--------|
+| Linear Regression  | ~0.126   | ~0.915 | ~0.153|
+| Ridge Regression   | ~0.131   | ~0.908 | ~0.145|
+| Random Forest      | ~0.150   | ~0.880 | ~0.145|
+| XGBoost            | ~0.126   | ~0.915 | ~0.123|
 
 ---
 
