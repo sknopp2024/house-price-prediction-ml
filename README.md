@@ -91,12 +91,30 @@ Target variable:
 
 ## Results Summary
 
-| Model              | Test RMSE | Test R² | CV RMSE |
-|-------------------|----------|--------|--------|
-| Linear Regression  | ~0.126   | ~0.915 | ~0.153|
-| Ridge Regression   | ~0.131   | ~0.908 | ~0.145|
-| Random Forest      | ~0.150   | ~0.880 | ~0.145|
-| XGBoost            | ~0.126   | ~0.915 | ~0.123|
+The table below summarizes **Cross-Validation (CV) RMSE** for baseline models before and after feature engineering. For Ridge Regression, Random Forest and XGBoost the optimised hyperparameters were used.
+
+
+#### Performance (CV Mean RMSE)
+| Model              | No FE | With FE |
+|-------------------|------|--------|
+| Linear Regression  | 0.1563 | 0.1531 |
+| Ridge Regression   | 0.1448 | 0.1417 |
+| Random Forest      | 0.1434 | 0.1375 |
+| XGBoost            | 0.1242 | 0.1265 |
+
+#### Stability (CV Std RMSE)
+| Model              | No FE | With FE |
+|-------------------|------|--------|
+| Linear Regression  | 0.0336 | 0.0290 |
+| Ridge Regression   | 0.0309 | 0.0299 |
+| Random Forest      | 0.0180 | 0.0182 |
+| XGBoost            | 0.0129 | 0.0108 |
+
+### Conclusions
+
+Feature engineering leads to consistent but model-dependent effects on cross-validation performance.
+
+Overall, feature engineering has a **moderate and mixed impact** on model performance. While linear and tree-based models benefit to some extent, XGBoost performance slightly deteriorates, indicating that more complex models may already extract sufficient structure from the original features. The most consistent effect across all models is a small reduction in variance, suggesting improved stability across cross-validation folds.
 
 ---
 
